@@ -1,0 +1,225 @@
+$color-primary: #F2F4F4;
+$color-secondary: #ffffff;
+
+@mixin border {
+    border: 1px solid #dcdcdc;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body {
+    box-sizing: content-box;
+    margin: auto;
+}
+
+main {
+    border-radius: 20px;
+    @include column;
+}
+
+.header {
+    padding-top: 20px;
+    margin-bottom: -20px;
+    text-align: center;
+    @include column;
+}
+
+.logo {
+    text-align: center;
+
+    img {
+        width: 40%;
+    }
+}
+
+
+
+.formulaires {
+    @include column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: $color-primary;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+.menu {
+
+    background-color: $color-primary;
+    padding-left: 20px;
+    padding-top: 50px;
+    border-radius: 50px;
+}
+
+.lieu {
+    display: flex;
+    background-color: #cfd2d2;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-principale {
+    width: 100%;
+    height: 250px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+.form {
+    @include column;
+    width: 60%;
+}
+
+.fonctionnement {
+    @include column;
+    height: 400px;
+}
+
+.titre {
+    font-size: larger;
+    margin-left: 20px;
+}
+
+.etapes {
+    @include column;
+    align-items: center;
+    gap: 30px;
+}
+
+.etape {
+    width: 80%;
+    display: flex;
+    text-align: center;
+
+}
+
+.entrées {
+    @include options;
+}
+
+.plats {
+    @include options;
+}
+
+.desserts {
+    @include options;
+}
+
+.bouton-explorer {
+
+    border-radius: 20px;
+    color: $color-secondary;
+    font-size: 20px;
+    line-height: 50px;
+    background: blueviolet;
+    text-decoration: none;
+    @include border;
+    margin-top: 20px;
+}
+
+
+
+.bouton-etape {
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+    background: $color-secondary;
+    text-decoration: none;
+    @include border;
+    padding: 20px;
+    background-color: $color-primary;
+    width: 100%;
+}
+
+.bouton-option-menu {
+    @include column;
+    border-radius: 20px;
+    color: black;
+    font-size: 14px;
+    background: $color-secondary;
+    text-decoration: none;
+    @include border;
+    padding: 10px;
+    width: 90%;
+}
+
+.texte-option-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nom-plat {
+    display: flex;
+}
+
+.prix {
+    display: flex;
+}
+
+.restaurants {
+    background-color: $color-primary;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.cards-restaurants {
+    @include column;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.card-restaurant {
+    width: 90%;
+    height: 300px;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: $color-secondary;
+
+    img {
+        object-fit: cover;
+        height: 70%;
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+
+.texte-restaurant {
+    height: 30%;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.footer {
+    height: 200px;
+    background-color: dimgray;
+    @include column;
+    color: $color-secondary;
+    justify-content: space-around;
+    padding-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: $color-secondary;
+
+    }
+}

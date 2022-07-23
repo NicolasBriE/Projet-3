@@ -1,0 +1,208 @@
+@charset "UTF-8";
+body {
+  box-sizing: content-box;
+  margin: auto;
+}
+
+main {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding-top: 20px;
+  margin-bottom: -20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  text-align: center;
+}
+.logo img {
+  width: 40%;
+}
+
+.formulaires {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: #F2F4F4;
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.menu {
+  background-color: #F2F4F4;
+  padding-left: 20px;
+  padding-top: 50px;
+  border-radius: 50px;
+}
+
+.lieu {
+  display: flex;
+  background-color: #cfd2d2;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-principale {
+  width: 100%;
+  height: 250px;
+}
+.image-principale img {
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.titre {
+  font-size: larger;
+  margin-left: 20px;
+}
+
+.etapes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.etape {
+  width: 80%;
+  display: flex;
+  text-align: center;
+}
+
+.entrées {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bouton-explorer {
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 50px;
+  background: blueviolet;
+  text-decoration: none;
+  border: 1px solid #dcdcdc;
+  margin-top: 20px;
+}
+
+.bouton-etape {
+  border-radius: 20px;
+  color: black;
+  font-size: 20px;
+  line-height: 50px;
+  background: #ffffff;
+  text-decoration: none;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  background-color: #F2F4F4;
+  width: 100%;
+}
+
+.bouton-option-menu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  color: black;
+  font-size: 14px;
+  background: #ffffff;
+  text-decoration: none;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  width: 90%;
+}
+
+.texte-option-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nom-plat {
+  display: flex;
+}
+
+.prix {
+  display: flex;
+}
+
+.restaurants {
+  background-color: #F2F4F4;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.cards-restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-restaurant {
+  width: 90%;
+  height: 300px;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.card-restaurant img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 70%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.texte-restaurant {
+  height: 30%;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.footer {
+  height: 200px;
+  background-color: dimgray;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  justify-content: space-around;
+  padding-left: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
