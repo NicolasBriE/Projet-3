@@ -58,7 +58,7 @@ main {
     background-color: $color-primary;
     padding-left: 20px;
     padding-top: 50px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 .lieu {
@@ -89,7 +89,7 @@ main {
 
 .fonctionnement {
     @include column;
-    height: 400px;
+    height: 450px;
 }
 
 .titre {
@@ -119,6 +119,10 @@ main {
 }
 
 .desserts {
+    @include options;
+}
+
+.options {
     @include options;
 }
 
@@ -159,6 +163,22 @@ main {
     @include border;
     padding: 10px;
     width: 90%;
+}
+
+.bouton-commander {
+    border-radius: 20px;
+    color: $color-secondary;
+    font-size: 20px;
+    line-height: 50px;
+    background: blueviolet;
+    text-decoration: none;
+    @include border;
+    margin-top: 20px;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    margin-left: 30%;
+    margin-bottom: 60px;
 }
 
 .texte-option-menu {
@@ -221,5 +241,98 @@ main {
         text-decoration: none;
         color: $color-secondary;
 
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 992px) {
+    .cards-restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card-restaurant {
+        width: 45%;
+    }
+
+    .footer {
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+    }
+
+    .titre {
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .etape {
+        width: 60%;
+    }
+
+    .options {
+        @include options;
+        align-items: center;
+    }
+
+    .option-menu {
+        width: 60%;
+    }
+
+    .bouton-commander {
+        margin-top: 60px;
+    }
+
+    .image-principale {
+        height: 400px;
+    }
+
+}
+
+@media screen and (min-width:993px) {
+
+    .etape {
+        width: 40%;
+    }
+
+    .titre {
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .cards-restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card-restaurant {
+        width: 20%;
+    }
+
+    .footer {
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+    }
+
+    .options {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .option-menu {
+        width: 25%;
+
+    }
+
+    .bouton-commander {
+        margin-top: 60px;
+    }
+
+    .image-principale {
+        height: 600px;
     }
 }
