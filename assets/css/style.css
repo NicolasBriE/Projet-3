@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,700&display=swap");
 body {
   box-sizing: content-box;
   margin: auto;
@@ -73,6 +74,11 @@ main {
   height: 450px;
 }
 
+.bloc-titre-principal {
+  display: flex;
+  justify-content: space-between;
+}
+
 .titre {
   font-size: larger;
   margin-left: 20px;
@@ -95,18 +101,29 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  -webkit-animation: display 0.5s;
 }
 
+@-webkit-keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .plats {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  -webkit-animation: display 2s;
 }
 
 .desserts {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  -webkit-animation: display 4s;
 }
 
 .options {
@@ -124,6 +141,12 @@ main {
   text-decoration: none;
   border: 1px solid #dcdcdc;
   margin-top: 20px;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+.bouton-explorer:hover {
+  transform: scale(1.15);
+  background: #af6eeb;
 }
 
 .bouton-etape {
@@ -137,6 +160,11 @@ main {
   padding: 20px;
   background-color: #F2F4F4;
   width: 100%;
+  transform: scale(1);
+  transition-property: transform;
+}
+.bouton-etape:hover {
+  transform: scale(1.15);
 }
 
 .bouton-option-menu {
@@ -166,6 +194,9 @@ main {
   justify-content: center;
   margin-left: 30%;
   margin-bottom: 60px;
+}
+.bouton-commander:hover {
+  background: #af6eeb;
 }
 
 .texte-option-menu {
@@ -211,8 +242,18 @@ main {
 
 .texte-restaurant {
   height: 30%;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-left: 20px;
+}
+
+.titre-restaurant {
+  flex-direction: column;
+}
+
+.icone-etoile {
+  margin: 20px;
 }
 
 .footer {
