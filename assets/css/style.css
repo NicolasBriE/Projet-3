@@ -11,6 +11,58 @@ main {
   flex-direction: column;
 }
 
+.loader {
+  background-color: white;
+  opacity: 1;
+  height: 100vh;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  -webkit-animation: disappear 3s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader-icon {
+  border: 10px solid white;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: spin 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes disappear {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+  }
+}
 .header {
   padding-top: 20px;
   margin-bottom: -20px;
@@ -101,7 +153,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  -webkit-animation: display 0.5s;
 }
 
 @-webkit-keyframes display {
@@ -116,20 +167,30 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  -webkit-animation: display 2s;
 }
 
 .desserts {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  -webkit-animation: display 4s;
 }
 
 .options {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.option-menu-rapide {
+  -webkit-animation: display 0.5s;
+}
+
+.option-menu-moyen {
+  -webkit-animation: display 2s;
+}
+
+.option-menu-lent {
+  -webkit-animation: display 4s;
 }
 
 .bouton-explorer {
@@ -341,6 +402,11 @@ main {
     margin-top: 60px;
   }
   .image-principale {
-    height: 600px;
+    width: 35%;
+    margin: auto;
+  }
+  .logo {
+    width: 50%;
+    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
