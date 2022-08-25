@@ -178,11 +178,19 @@ main {
 @-webkit-keyframes display {
     from {
         opacity: 0;
+        -webkit-transform: translateY(0);
     }
 
     to {
         opacity: 1;
+        -webkit-transform: translateY(-15px);
     }
+}
+
+@-webkit-keyframes translate {
+    0% {}
+
+    100% {}
 }
 
 .plats {
@@ -199,15 +207,101 @@ main {
 
 .option-menu-rapide {
     -webkit-animation: display 0.5s;
+    display: flex;
+    text-decoration: none;
+    animation-fill-mode: forwards;
+
+
+    &:hover {
+
+        .prix {
+            transform: translateX(-100px);
+        }
+
+        .bouton-valider {
+            transform: translateX(-40px) scaleX(2);
+        }
+
+        .bouton-valider-icone {
+            transform: rotate(360deg);
+        }
+    }
+
 }
 
 .option-menu-moyen {
     -webkit-animation: display 2s;
+    display: flex;
+    text-decoration: none;
+    animation-fill-mode: forwards;
+
+    &:hover {
+
+        .prix {
+            transform: translateX(-100px);
+        }
+
+        .bouton-valider {
+            transform: translateX(-40px) scaleX(2);
+        }
+
+        .bouton-valider-icone {
+            transform: rotate(360deg);
+        }
+    }
+
 }
 
 .option-menu-lent {
     -webkit-animation: display 4s;
+    display: flex;
+    text-decoration: none;
+    animation-fill-mode: forwards;
+
+    &:hover {
+
+        .prix {
+            transform: translateX(-100px);
+        }
+
+        .bouton-valider {
+            transform: translateX(-40px) scaleX(2);
+        }
+
+        .bouton-valider-icone {
+            transform: rotate(360deg);
+        }
+    }
 }
+
+.bouton-valider {
+    display: flex;
+    background: lightgreen;
+    align-items: center;
+    justify-content: center;
+    margin-left: -30px;
+    border-radius: 0% 20% 20% 0%;
+    transform: translateX(0px) scaleX(0);
+    transition: transform 2s;
+
+    &:hover {
+        cursor: grab;
+    }
+}
+
+.bouton-valider-icone {
+    border: solid 1px;
+    border-radius: 50% 50% 50% 50%;
+    margin: 20px;
+    transform: rotate(0deg);
+    transition: transform 1s;
+
+    &:hover {
+        cursor: grab;
+    }
+}
+
+
 
 .bouton-explorer {
 
@@ -228,7 +322,20 @@ main {
     }
 }
 
-
+.numero-etape {
+    display: flex;
+    border: solid 1px black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #AB4FC4;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-top: 30px;
+    margin-right: -15px;
+    z-index: 1;
+}
 
 
 .bouton-etape {
@@ -247,6 +354,11 @@ main {
 
     &:hover {
         transform: scale(1.15);
+        background-color: #DBBCE3;
+
+        .fa-solid {
+            color: #AB4FC4;
+        }
     }
 }
 
@@ -282,6 +394,10 @@ main {
     }
 }
 
+.bouton-option-menu-titre {
+    @include column;
+}
+
 .texte-option-menu {
     display: flex;
     justify-content: space-between;
@@ -293,6 +409,8 @@ main {
 
 .prix {
     display: flex;
+    transition: transform 2s;
+    transform: translateX(0);
 }
 
 .restaurants {
@@ -312,6 +430,7 @@ main {
     width: 90%;
     height: 300px;
     text-decoration: none;
+    color: black;
     border-radius: 20px;
     background-color: $color-secondary;
 
@@ -339,6 +458,18 @@ main {
 .icone-etoile {
     margin: 20px;
 }
+
+.fa-regular {
+    width: 20px;
+    font-size: x-large;
+
+    &:hover {
+        cursor: pointer;
+        color: purple;
+    }
+}
+
+
 
 .footer {
     height: 200px;
@@ -387,7 +518,15 @@ main {
         align-items: center;
     }
 
-    .option-menu {
+    .option-menu-rapide {
+        width: 60%;
+    }
+
+    .option-menu-moyen {
+        width: 60%;
+    }
+
+    .option-menu-lent {
         width: 60%;
     }
 
@@ -434,17 +573,31 @@ main {
         justify-content: space-evenly;
     }
 
-    .option-menu {
+    .option-menu-rapide {
         width: 25%;
+        text-decoration: none;
 
+    }
+
+    .option-menu-moyen {
+        width: 25%;
+    }
+
+    .option-menu-lent {
+        width: 25%;
     }
 
     .bouton-commander {
         margin-top: 60px;
     }
 
+    .header {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .image-principale {
-        width: 35%;
+        height: 500px;
         margin: auto;
     }
 
@@ -452,4 +605,5 @@ main {
         width: 50%;
         margin: auto;
     }
+
 }
