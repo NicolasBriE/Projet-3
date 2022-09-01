@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,700&display=swap');
 
 
-$color-primary: #F2F4F4;
-$color-secondary: #ffffff;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-fourth: #F2F4F4;
+$color-fifth: #ffffff;
 
 @mixin border {
     border: 1px solid #dcdcdc;
@@ -17,6 +20,16 @@ $color-secondary: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+@mixin titre {
+    font-size: larger;
+    margin-left: 20px;
+}
+
+@mixin titre-media {
+    text-align: center;
+    font-size: x-large;
 }
 
 body {
@@ -83,7 +96,6 @@ main {
 }
 
 .header {
-    padding-top: 20px;
     margin-bottom: -20px;
     text-align: center;
     @include column;
@@ -91,27 +103,37 @@ main {
 
 .logo {
     text-align: center;
+    margin-top: 10px;
+    font-family: 'Shrikhand';
 
     img {
         width: 40%;
     }
 }
 
+.header-link {
+    display: flex;
+    justify-content: space-between;
+}
 
+.arrow-icon {
+    margin: 10px;
+    font-size: large;
+}
 
 .formulaires {
     @include column;
     text-align: center;
     align-items: center;
     margin-bottom: 40px;
-    background-color: $color-primary;
+    background-color: $color-fourth;
     padding-bottom: 40px;
     margin-top: 20px;
 }
 
 .menu {
 
-    background-color: $color-primary;
+    background-color: $color-fourth;
     padding-left: 20px;
     padding-top: 50px;
     border-radius: 30px;
@@ -136,7 +158,19 @@ main {
     }
 }
 
+.nouveau {
+    position: relative;
+}
 
+.nouveau::before {
+    content: "Nouveau";
+    position: absolute;
+    width: fit-content;
+    background-color: $color-tertiary;
+    margin-top: 10px;
+    padding: 5px;
+    right: 20px;
+}
 
 .form {
     @include column;
@@ -153,9 +187,13 @@ main {
     justify-content: space-between;
 }
 
-.titre {
-    font-size: larger;
-    margin-left: 20px;
+.titre-menu {
+    @include titre;
+    text-decoration: underline $color-tertiary 3px;
+}
+
+.titre-accueil {
+    @include titre;
 }
 
 .etapes {
@@ -210,22 +248,37 @@ main {
     display: flex;
     text-decoration: none;
     animation-fill-mode: forwards;
+    border-radius: 20px;
+    @include border;
+    background-color: $color-fifth;
+    overflow: hidden;
 
 
     &:hover {
 
         .prix {
-            transform: translateX(-100px);
+            transform: translateX(-100px)
+        }
+
+        .nom-plat {
+            width: 30%;
         }
 
         .bouton-valider {
-            transform: translateX(-40px) scaleX(2);
+            transform: translateX(-60px);
         }
 
-        .bouton-valider-icone {
-            transform: rotate(360deg);
+
+        .fa-check {
+            transform: rotate(720deg);
+
+            &:hover {
+                cursor: grab;
+            }
         }
+
     }
+
 
 }
 
@@ -234,6 +287,10 @@ main {
     display: flex;
     text-decoration: none;
     animation-fill-mode: forwards;
+    border-radius: 20px;
+    @include border;
+    background-color: $color-fifth;
+    overflow: hidden;
 
     &:hover {
 
@@ -241,15 +298,24 @@ main {
             transform: translateX(-100px);
         }
 
+        .nom-plat {
+            width: 30%;
+        }
+
         .bouton-valider {
-            transform: translateX(-40px) scaleX(2);
+            transform: translateX(-56px);
         }
 
-        .bouton-valider-icone {
-            transform: rotate(360deg);
+
+        .fa-check {
+            transform: rotate(720deg);
+
+            &:hover {
+                cursor: grab;
+            }
         }
+
     }
-
 }
 
 .option-menu-lent {
@@ -257,6 +323,10 @@ main {
     display: flex;
     text-decoration: none;
     animation-fill-mode: forwards;
+    border-radius: 20px;
+    @include border;
+    background-color: $color-fifth;
+    overflow: hidden;
 
     &:hover {
 
@@ -264,37 +334,47 @@ main {
             transform: translateX(-100px);
         }
 
+        .nom-plat {
+            width: 30%;
+        }
+
         .bouton-valider {
-            transform: translateX(-40px) scaleX(2);
+            transform: translateX(-56px);
         }
 
-        .bouton-valider-icone {
-            transform: rotate(360deg);
+        .fa-check {
+            transform: rotate(720deg);
+
+            &:hover {
+                cursor: grab;
+            }
         }
+
     }
+
+
 }
 
-.bouton-valider {
-    display: flex;
-    background: lightgreen;
-    align-items: center;
-    justify-content: center;
-    margin-left: -30px;
-    border-radius: 0% 20% 20% 0%;
-    transform: translateX(0px) scaleX(0);
-    transition: transform 2s;
-
-    &:hover {
-        cursor: grab;
-    }
-}
-
-.bouton-valider-icone {
+.fa-check {
     border: solid 1px;
     border-radius: 50% 50% 50% 50%;
     margin: 20px;
     transform: rotate(0deg);
-    transition: transform 1s;
+    transition: transform 2s;
+    color: $color-tertiary;
+    background-color: white;
+}
+
+.bouton-valider {
+    display: flex;
+    background: $color-tertiary;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0% 20% 20% 0%;
+    transform: translateX(0px);
+    transition: transform 2s;
+    position: relative;
+    left: 60px;
 
     &:hover {
         cursor: grab;
@@ -306,10 +386,10 @@ main {
 .bouton-explorer {
 
     border-radius: 20px;
-    color: $color-secondary;
+    color: $color-fifth;
     font-size: 20px;
     line-height: 50px;
-    background: blueviolet;
+    background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
     @include border;
     margin-top: 20px;
@@ -318,7 +398,6 @@ main {
 
     &:hover {
         transform: scale(1.15);
-        background: lighten($color: blueviolet, $amount: 15%);
     }
 }
 
@@ -328,7 +407,7 @@ main {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #AB4FC4;
+    background-color: $color-primary;
     color: white;
     height: 30px;
     width: 30px;
@@ -343,18 +422,18 @@ main {
     color: black;
     font-size: 20px;
     line-height: 50px;
-    background: $color-secondary;
+    background: $color-fifth;
     text-decoration: none;
     @include border;
     padding: 20px;
-    background-color: $color-primary;
+    background-color: $color-fourth;
     width: 100%;
     transform: scale(1);
     transition-property: transform;
 
     &:hover {
         transform: scale(1.15);
-        background-color: #DBBCE3;
+        background-color: lighten($color-primary, $amount: 35%);
 
         .fa-solid {
             color: #AB4FC4;
@@ -364,22 +443,19 @@ main {
 
 .bouton-option-menu {
     @include column;
-    border-radius: 20px;
     color: black;
     font-size: 14px;
-    background: $color-secondary;
     text-decoration: none;
-    @include border;
     padding: 10px;
     width: 90%;
 }
 
 .bouton-commander {
     border-radius: 20px;
-    color: $color-secondary;
+    color: $color-fifth;
     font-size: 20px;
     line-height: 50px;
-    background: blueviolet;
+    background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
     @include border;
     margin-top: 20px;
@@ -404,7 +480,13 @@ main {
 }
 
 .nom-plat {
-    display: flex;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 16px;
+    width: 90%;
+    transition: width 2s;
 }
 
 .prix {
@@ -414,7 +496,7 @@ main {
 }
 
 .restaurants {
-    background-color: $color-primary;
+    background-color: $color-fourth;
     padding-bottom: 40px;
     padding-top: 40px;
 }
@@ -432,7 +514,7 @@ main {
     text-decoration: none;
     color: black;
     border-radius: 20px;
-    background-color: $color-secondary;
+    background-color: $color-fifth;
 
     img {
         object-fit: cover;
@@ -455,17 +537,21 @@ main {
     flex-direction: column;
 }
 
-.icone-etoile {
-    margin: 20px;
-}
 
-.fa-regular {
-    width: 20px;
+.far {
+    margin: 20px;
     font-size: x-large;
+    transition: all 1s;
+
+
 
     &:hover {
         cursor: pointer;
-        color: purple;
+        font-weight: bold;
+        color: transparent;
+        background-image: linear-gradient(red, blue);
+        background-clip: text;
+        -webkit-background-clip: text;
     }
 }
 
@@ -475,13 +561,13 @@ main {
     height: 200px;
     background-color: dimgray;
     @include column;
-    color: $color-secondary;
+    color: $color-fifth;
     justify-content: space-around;
     padding-left: 20px;
 
     a {
         text-decoration: none;
-        color: $color-secondary;
+        color: $color-fifth;
 
     }
 }
@@ -504,9 +590,12 @@ main {
         font-size: larger;
     }
 
-    .titre {
-        text-align: center;
-        font-size: x-large;
+    .titre-menu {
+        @include titre-media;
+    }
+
+    .titre-accueil {
+        @include titre-media;
     }
 
     .etape {
@@ -517,6 +606,7 @@ main {
         @include options;
         align-items: center;
     }
+
 
     .option-menu-rapide {
         width: 60%;
@@ -542,13 +632,21 @@ main {
 
 @media screen and (min-width:993px) {
 
+    body {
+        width: 90%;
+    }
+
     .etape {
         width: 40%;
     }
 
-    .titre {
-        text-align: center;
-        font-size: x-large;
+    .titre-accueil {
+        @include titre-media;
+    }
+
+    .titre-menu {
+        @include titre-media;
+
     }
 
     .cards-restaurants {
@@ -560,6 +658,15 @@ main {
 
     .card-restaurant {
         width: 20%;
+        height: 300px;
+    }
+
+    .card-restaurant img {
+        height: 60%;
+    }
+
+    .texte-restaurant {
+        height: 40%;
     }
 
     .footer {
@@ -571,20 +678,21 @@ main {
     .options {
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     .option-menu-rapide {
-        width: 25%;
+        width: 30%;
         text-decoration: none;
 
     }
 
     .option-menu-moyen {
-        width: 25%;
+        width: 30%;
     }
 
     .option-menu-lent {
-        width: 25%;
+        width: 30%;
     }
 
     .bouton-commander {
@@ -597,7 +705,7 @@ main {
     }
 
     .image-principale {
-        height: 500px;
+        height: 600px;
         margin: auto;
     }
 

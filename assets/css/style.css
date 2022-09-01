@@ -64,7 +64,6 @@ main {
   }
 }
 .header {
-  padding-top: 20px;
   margin-bottom: -20px;
   text-align: center;
   display: flex;
@@ -73,9 +72,21 @@ main {
 
 .logo {
   text-align: center;
+  margin-top: 10px;
+  font-family: "Shrikhand";
 }
 .logo img {
   width: 40%;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-icon {
+  margin: 10px;
+  font-size: large;
 }
 
 .formulaires {
@@ -114,6 +125,22 @@ main {
   width: 100%;
 }
 
+.nouveau {
+  position: relative;
+}
+
+.nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #99E2D0;
+  margin-top: 10px;
+  padding: 5px;
+  right: 20px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -131,7 +158,14 @@ main {
   justify-content: space-between;
 }
 
-.titre {
+.titre-menu {
+  font-size: larger;
+  margin-left: 20px;
+  -webkit-text-decoration: underline #99E2D0 3px;
+          text-decoration: underline #99E2D0 3px;
+}
+
+.titre-accueil {
   font-size: larger;
   margin-left: 20px;
 }
@@ -190,15 +224,26 @@ main {
   text-decoration: none;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 .option-menu-rapide:hover .prix {
   transform: translateX(-100px);
 }
-.option-menu-rapide:hover .bouton-valider {
-  transform: translateX(-40px) scaleX(2);
+.option-menu-rapide:hover .nom-plat {
+  width: 30%;
 }
-.option-menu-rapide:hover .bouton-valider-icone {
-  transform: rotate(360deg);
+.option-menu-rapide:hover .bouton-valider {
+  transform: translateX(-60px);
+}
+.option-menu-rapide:hover .fa-check {
+  transform: rotate(720deg);
+}
+.option-menu-rapide:hover .fa-check:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .option-menu-moyen {
@@ -207,15 +252,26 @@ main {
   text-decoration: none;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 .option-menu-moyen:hover .prix {
   transform: translateX(-100px);
 }
-.option-menu-moyen:hover .bouton-valider {
-  transform: translateX(-40px) scaleX(2);
+.option-menu-moyen:hover .nom-plat {
+  width: 30%;
 }
-.option-menu-moyen:hover .bouton-valider-icone {
-  transform: rotate(360deg);
+.option-menu-moyen:hover .bouton-valider {
+  transform: translateX(-56px);
+}
+.option-menu-moyen:hover .fa-check {
+  transform: rotate(720deg);
+}
+.option-menu-moyen:hover .fa-check:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .option-menu-lent {
@@ -224,40 +280,50 @@ main {
   text-decoration: none;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 .option-menu-lent:hover .prix {
   transform: translateX(-100px);
 }
+.option-menu-lent:hover .nom-plat {
+  width: 30%;
+}
 .option-menu-lent:hover .bouton-valider {
-  transform: translateX(-40px) scaleX(2);
+  transform: translateX(-56px);
 }
-.option-menu-lent:hover .bouton-valider-icone {
-  transform: rotate(360deg);
+.option-menu-lent:hover .fa-check {
+  transform: rotate(720deg);
 }
-
-.bouton-valider {
-  display: flex;
-  background: lightgreen;
-  align-items: center;
-  justify-content: center;
-  margin-left: -30px;
-  border-radius: 0% 20% 20% 0%;
-  transform: translateX(0px) scaleX(0);
-  transition: transform 2s;
-}
-.bouton-valider:hover {
+.option-menu-lent:hover .fa-check:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-.bouton-valider-icone {
+.fa-check {
   border: solid 1px;
   border-radius: 50% 50% 50% 50%;
   margin: 20px;
   transform: rotate(0deg);
-  transition: transform 1s;
+  transition: transform 2s;
+  color: #99E2D0;
+  background-color: white;
 }
-.bouton-valider-icone:hover {
+
+.bouton-valider {
+  display: flex;
+  background: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0% 20% 20% 0%;
+  transform: translateX(0px);
+  transition: transform 2s;
+  position: relative;
+  left: 60px;
+}
+.bouton-valider:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -267,7 +333,7 @@ main {
   color: #ffffff;
   font-size: 20px;
   line-height: 50px;
-  background: blueviolet;
+  background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
   border: 1px solid #dcdcdc;
   margin-top: 20px;
@@ -276,7 +342,6 @@ main {
 }
 .bouton-explorer:hover {
   transform: scale(1.15);
-  background: #af6eeb;
 }
 
 .numero-etape {
@@ -285,7 +350,7 @@ main {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: #AB4FC4;
+  background-color: #9356DC;
   color: white;
   height: 30px;
   width: 30px;
@@ -310,7 +375,7 @@ main {
 }
 .bouton-etape:hover {
   transform: scale(1.15);
-  background-color: #DBBCE3;
+  background-color: #f2eafb;
 }
 .bouton-etape:hover .fa-solid {
   color: #AB4FC4;
@@ -319,12 +384,9 @@ main {
 .bouton-option-menu {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
   color: black;
   font-size: 14px;
-  background: #ffffff;
   text-decoration: none;
-  border: 1px solid #dcdcdc;
   padding: 10px;
   width: 90%;
 }
@@ -334,7 +396,7 @@ main {
   color: #ffffff;
   font-size: 20px;
   line-height: 50px;
-  background: blueviolet;
+  background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
   border: 1px solid #dcdcdc;
   margin-top: 20px;
@@ -359,7 +421,13 @@ main {
 }
 
 .nom-plat {
-  display: flex;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 16px;
+  width: 90%;
+  transition: width 2s;
 }
 
 .prix {
@@ -409,17 +477,18 @@ main {
   flex-direction: column;
 }
 
-.icone-etoile {
+.far {
   margin: 20px;
-}
-
-.fa-regular {
-  width: 20px;
   font-size: x-large;
+  transition: all 1s;
 }
-.fa-regular:hover {
+.far:hover {
   cursor: pointer;
-  color: purple;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .footer {
@@ -451,7 +520,11 @@ main {
     align-items: center;
     font-size: larger;
   }
-  .titre {
+  .titre-menu {
+    text-align: center;
+    font-size: x-large;
+  }
+  .titre-accueil {
     text-align: center;
     font-size: x-large;
   }
@@ -481,10 +554,17 @@ main {
   }
 }
 @media screen and (min-width: 993px) {
+  body {
+    width: 90%;
+  }
   .etape {
     width: 40%;
   }
-  .titre {
+  .titre-accueil {
+    text-align: center;
+    font-size: x-large;
+  }
+  .titre-menu {
     text-align: center;
     font-size: x-large;
   }
@@ -496,6 +576,13 @@ main {
   }
   .card-restaurant {
     width: 20%;
+    height: 300px;
+  }
+  .card-restaurant img {
+    height: 60%;
+  }
+  .texte-restaurant {
+    height: 40%;
   }
   .footer {
     justify-content: center;
@@ -505,16 +592,17 @@ main {
   .options {
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .option-menu-rapide {
-    width: 25%;
+    width: 30%;
     text-decoration: none;
   }
   .option-menu-moyen {
-    width: 25%;
+    width: 30%;
   }
   .option-menu-lent {
-    width: 25%;
+    width: 30%;
   }
   .bouton-commander {
     margin-top: 60px;
@@ -524,7 +612,7 @@ main {
     margin-right: 10%;
   }
   .image-principale {
-    height: 500px;
+    height: 600px;
     margin: auto;
   }
   .logo {
