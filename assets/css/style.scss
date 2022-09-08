@@ -28,7 +28,6 @@ $color-fifth: #ffffff;
 }
 
 @mixin titre-media {
-    text-align: center;
     font-size: x-large;
 }
 
@@ -121,6 +120,8 @@ main {
     font-size: large;
 }
 
+
+
 .formulaires {
     @include column;
     text-align: center;
@@ -189,7 +190,14 @@ main {
 
 .titre-menu {
     @include titre;
-    text-decoration: underline $color-tertiary 3px;
+
+    &::after {
+        border-top: solid 3px $color-tertiary;
+        width: 30px;
+        height: 40px;
+        content: "";
+        display: -webkit-box;
+    }
 }
 
 .titre-accueil {
@@ -539,21 +547,45 @@ main {
 
 
 .far {
-    margin: 20px;
+    position: relative;
     font-size: x-large;
     transition: all 1s;
+    opacity: 1;
 
+}
 
+.far::before {
+    position: absolute;
+    content: "";
+    right: 10px;
 
     &:hover {
-        cursor: pointer;
-        font-weight: bold;
-        color: transparent;
-        background-image: linear-gradient(red, blue);
-        background-clip: text;
-        -webkit-background-clip: text;
+        opacity: 0;
+
+        .fas {
+            opacity: 1;
+            cursor: pointer;
+            font-weight: bold;
+            color: transparent;
+            background-image: linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
     }
 }
+
+.fas {
+    position: relative;
+    font-size: x-large;
+    opacity: 0;
+}
+
+.fas::before {
+    position: absolute;
+    content: "";
+}
+
 
 
 
@@ -646,8 +678,8 @@ main {
 
     .titre-menu {
         @include titre-media;
-
     }
+
 
     .cards-restaurants {
         display: flex;
