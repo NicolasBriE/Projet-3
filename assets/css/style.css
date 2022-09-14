@@ -156,6 +156,35 @@ main {
 .bloc-titre-principal {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.bloc-titre-principal i {
+  position: absolute;
+  font-size: x-large;
+  transition: all 500ms;
+  right: 10px;
+}
+.bloc-titre-principal i.fas {
+  font-size: x-large;
+  opacity: 0;
+  right: 10px;
+}
+.bloc-titre-principal i.fas:hover {
+  opacity: 1;
+  cursor: pointer;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.bloc-titre-principal i.far {
+  font-size: x-large;
+  opacity: 1;
+  right: 10px;
+}
+.bloc-titre-principal i.far.hover {
+  opacity: 0;
 }
 
 .titre-menu {
@@ -476,28 +505,21 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin-left: 20px;
-}
-
-.titre-restaurant {
-  flex-direction: column;
-}
-
-.far {
   position: relative;
-  font-size: x-large;
-  transition: all 1s;
-  opacity: 1;
 }
-
-.far::before {
+.texte-restaurant i {
   position: absolute;
-  content: "";
+  font-size: x-large;
+  transition: all 500ms;
+  top: 45%;
   right: 10px;
 }
-.far::before:hover {
+.texte-restaurant i.fas {
+  font-size: x-large;
   opacity: 0;
+  right: 10px;
 }
-.far::before:hover .fas {
+.texte-restaurant i.fas:hover {
   opacity: 1;
   cursor: pointer;
   font-weight: bold;
@@ -506,16 +528,17 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
 }
-
-.fas {
-  position: relative;
+.texte-restaurant i.far {
   font-size: x-large;
+  opacity: 1;
+  right: 10px;
+}
+.texte-restaurant i.far.hover {
   opacity: 0;
 }
 
-.fas::before {
-  position: absolute;
-  content: "";
+.titre-restaurant {
+  flex-direction: column;
 }
 
 .footer {

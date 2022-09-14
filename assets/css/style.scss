@@ -186,6 +186,47 @@ main {
 .bloc-titre-principal {
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    i {
+        position: absolute;
+        font-size: x-large;
+        transition: all 500ms;
+        right: 10px;
+
+        &.fas {
+
+            font-size: x-large;
+            opacity: 0;
+            right: 10px;
+
+            &:hover {
+
+                opacity: 1;
+                cursor: pointer;
+                font-weight: bold;
+                color: transparent;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+
+
+            }
+        }
+
+        &.far {
+            font-size: x-large;
+            opacity: 1;
+            right: 10px;
+
+            &.hover {
+                opacity: 0;
+            }
+        }
+
+
+    }
+
 }
 
 .titre-menu {
@@ -539,53 +580,53 @@ main {
     flex-direction: row;
     justify-content: space-between;
     margin-left: 20px;
-}
-
-.titre-restaurant {
-    flex-direction: column;
-}
-
-
-.far {
     position: relative;
-    font-size: x-large;
-    transition: all 1s;
-    opacity: 1;
 
-}
+    i {
+        position: absolute;
+        font-size: x-large;
+        transition: all 500ms;
+        top: 45%;
+        right: 10px;
 
-.far::before {
-    position: absolute;
-    content: "";
-    right: 10px;
+        &.fas {
 
-    &:hover {
-        opacity: 0;
+            font-size: x-large;
+            opacity: 0;
+            right: 10px;
 
-        .fas {
+            &:hover {
+
+                opacity: 1;
+                cursor: pointer;
+                font-weight: bold;
+                color: transparent;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+
+
+            }
+        }
+
+        &.far {
+            font-size: x-large;
             opacity: 1;
-            cursor: pointer;
-            font-weight: bold;
-            color: transparent;
-            background-image: linear-gradient($color-secondary, $color-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
+            right: 10px;
+
+            &.hover {
+                opacity: 0;
+            }
         }
 
     }
 }
 
-.fas {
-    position: relative;
-    font-size: x-large;
-    opacity: 0;
-}
 
-.fas::before {
-    position: absolute;
-    content: "";
-}
 
+.titre-restaurant {
+    flex-direction: column;
+}
 
 
 
