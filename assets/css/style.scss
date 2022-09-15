@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,700&display=swap');
+@font-face {
+    font-family: Roboto;
+    src: url(..font/Roboto/Roboto-Regular);
+}
 
+@font-face {
+    font-family: Shrikhand;
+    src: url(..font/Shrikhand/Shrikhand-Regular);
+}
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -25,6 +32,7 @@ $color-fifth: #ffffff;
 @mixin titre {
     font-size: larger;
     margin-left: 20px;
+    font-family: 'Shrikhand', sans-serif;
 }
 
 @mixin titre-media {
@@ -34,6 +42,7 @@ $color-fifth: #ffffff;
 body {
     box-sizing: content-box;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -52,6 +61,7 @@ main {
     right: 0;
     bottom: 0;
     z-index: 2;
+    animation: disappear 3s;
     -webkit-animation: disappear 3s;
     animation-delay: 5s;
     animation-fill-mode: forwards;
@@ -70,8 +80,19 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    animation: spin 3s;
     -webkit-animation: spin 3s;
     animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @-webkit-keyframes spin {
@@ -83,6 +104,18 @@ main {
         -webkit-transform: rotate(360deg);
     }
 }
+
+@keyframes disappear {
+
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+    }
+}
+
 
 @-webkit-keyframes disappear {
     0% {
@@ -103,7 +136,7 @@ main {
 .logo {
     text-align: center;
     margin-top: 10px;
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', sans-serif;
 
     img {
         width: 40%;
@@ -255,11 +288,23 @@ main {
     width: 80%;
     display: flex;
     text-align: center;
-
 }
 
 .entrées {
     @include options;
+}
+
+@keyframes display {
+
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-15px);
+    }
 }
 
 @-webkit-keyframes display {
@@ -272,6 +317,12 @@ main {
         opacity: 1;
         -webkit-transform: translateY(-15px);
     }
+}
+
+@keyframes translate {
+    0% {}
+
+    100% {}
 }
 
 @-webkit-keyframes translate {
@@ -293,6 +344,7 @@ main {
 }
 
 .option-menu-rapide {
+    animation: display 0.5 s;
     -webkit-animation: display 0.5s;
     display: flex;
     text-decoration: none;
@@ -332,6 +384,7 @@ main {
 }
 
 .option-menu-moyen {
+    animation: display 2s;
     -webkit-animation: display 2s;
     display: flex;
     text-decoration: none;
@@ -368,6 +421,7 @@ main {
 }
 
 .option-menu-lent {
+    animation: display 4s;
     -webkit-animation: display 4s;
     display: flex;
     text-decoration: none;
