@@ -168,7 +168,7 @@ main {
 .menu {
 
     background-color: $color-fourth;
-    padding-left: 20px;
+    padding: 20px;
     padding-top: 50px;
     border-radius: 30px;
 }
@@ -344,7 +344,7 @@ main {
 }
 
 .option-menu-rapide {
-    animation: display 0.5 s;
+    animation: display 0.5s;
     -webkit-animation: display 0.5s;
     display: flex;
     text-decoration: none;
@@ -475,7 +475,7 @@ main {
     justify-content: center;
     border-radius: 0% 20% 20% 0%;
     transform: translateX(0px);
-    transition: transform 2s;
+    transition: transform 1s;
     position: relative;
     left: 60px;
 
@@ -839,6 +839,10 @@ main {
     .logo {
         width: 50%;
         margin: auto;
+    }
+
+    .nom-plat {
+        width: 70%;
     }
 
 }
