@@ -142,6 +142,10 @@ main {
   justify-content: center;
 }
 
+.titre-principal {
+  font-family: "Shrikhand", sans-serif;
+}
+
 .image-principale {
   width: 100%;
   height: 250px;
@@ -188,12 +192,12 @@ main {
   position: absolute;
   font-size: x-large;
   transition: all 500ms;
-  right: 10px;
+  right: 30px;
+  top: 30px;
 }
 .bloc-titre-principal i.fas {
   font-size: x-large;
   opacity: 0;
-  right: 10px;
 }
 .bloc-titre-principal i.fas:hover {
   opacity: 1;
@@ -207,7 +211,6 @@ main {
 .bloc-titre-principal i.far {
   font-size: x-large;
   opacity: 1;
-  right: 10px;
 }
 .bloc-titre-principal i.far.hover {
   opacity: 0;
@@ -216,7 +219,6 @@ main {
 .titre-menu {
   font-size: larger;
   margin-left: 20px;
-  font-family: "Shrikhand", sans-serif;
 }
 .titre-menu::after {
   border-top: solid 3px #99E2D0;
@@ -229,7 +231,6 @@ main {
 .titre-accueil {
   font-size: larger;
   margin-left: 20px;
-  font-family: "Shrikhand", sans-serif;
 }
 
 .etapes {
@@ -553,13 +554,12 @@ main {
   position: absolute;
   font-size: x-large;
   transition: all 500ms;
-  top: 45%;
-  right: 10px;
+  top: 20%;
+  right: 30px;
 }
 .texte-restaurant i.fas {
   font-size: x-large;
   opacity: 0;
-  right: 10px;
 }
 .texte-restaurant i.fas:hover {
   opacity: 1;
@@ -573,7 +573,6 @@ main {
 .texte-restaurant i.far {
   font-size: x-large;
   opacity: 1;
-  right: 10px;
 }
 .texte-restaurant i.far.hover {
   opacity: 0;
