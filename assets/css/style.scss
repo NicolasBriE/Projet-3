@@ -31,7 +31,6 @@ $color-fifth: #ffffff;
 
 @mixin titre {
     font-size: larger;
-    margin-left: 20px;
 }
 
 @mixin titre-media {
@@ -183,6 +182,7 @@ main {
 
 .titre-principal {
     font-family: 'Shrikhand', sans-serif;
+    font-size: 1.7em;
 }
 
 .image-principale {
@@ -229,7 +229,7 @@ main {
         font-size: x-large;
         transition: all 500ms;
         right: 30px;
-        top: 30px;
+        top: 25px;
 
         &.fas {
 
@@ -356,6 +356,7 @@ main {
     @include border;
     background-color: $color-fifth;
     overflow: hidden;
+    position: relative;
 
 
     &:hover {
@@ -396,6 +397,7 @@ main {
     @include border;
     background-color: $color-fifth;
     overflow: hidden;
+    position: relative;
 
     &:hover {
 
@@ -433,6 +435,7 @@ main {
     @include border;
     background-color: $color-fifth;
     overflow: hidden;
+    position: relative;
 
     &:hover {
 
@@ -599,6 +602,8 @@ main {
     display: flex;
     transition: transform 2s;
     transform: translateX(0);
+    position: absolute;
+    left: 90%;
 }
 
 .restaurants {
@@ -707,6 +712,10 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .logo {
+        margin: auto;
     }
 
     .card-restaurant {
