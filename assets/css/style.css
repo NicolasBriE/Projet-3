@@ -308,7 +308,7 @@ main {
   transform: translateX(-100px);
 }
 .option-menu-rapide:hover .nom-plat {
-  width: 30%;
+  width: 60%;
 }
 .option-menu-rapide:hover .bouton-valider {
   transform: translateX(-60px);
@@ -338,7 +338,7 @@ main {
   transform: translateX(-100px);
 }
 .option-menu-moyen:hover .nom-plat {
-  width: 30%;
+  width: 60%;
 }
 .option-menu-moyen:hover .bouton-valider {
   transform: translateX(-56px);
@@ -368,7 +368,7 @@ main {
   transform: translateX(-100px);
 }
 .option-menu-lent:hover .nom-plat {
-  width: 30%;
+  width: 60%;
 }
 .option-menu-lent:hover .bouton-valider {
   transform: translateX(-56px);
@@ -505,7 +505,7 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 16px;
-  width: 90%;
+  width: 100%;
   transition: width 2s;
 }
 
@@ -712,8 +712,5 @@ main {
   .logo {
     width: 50%;
     margin: auto;
-  }
-  .nom-plat {
-    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */

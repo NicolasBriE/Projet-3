@@ -366,7 +366,7 @@ main {
         }
 
         .nom-plat {
-            width: 30%;
+            width: 60%;
         }
 
         .bouton-valider {
@@ -406,7 +406,7 @@ main {
         }
 
         .nom-plat {
-            width: 30%;
+            width: 60%;
         }
 
         .bouton-valider {
@@ -444,7 +444,7 @@ main {
         }
 
         .nom-plat {
-            width: 30%;
+            width: 60%;
         }
 
         .bouton-valider {
@@ -594,7 +594,7 @@ main {
     text-overflow: ellipsis;
     white-space: nowrap;
     height: 16px;
-    width: 90%;
+    width: 100%;
     transition: width 2s;
 }
 
@@ -852,8 +852,5 @@ main {
         margin: auto;
     }
 
-    .nom-plat {
-        width: 70%;
-    }
 
 }
