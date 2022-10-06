@@ -30,10 +30,10 @@ main {
   right: 0;
   bottom: 0;
   z-index: 2;
-  animation: disappear 3s;
-  -webkit-animation: disappear 3s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  animation: disappear 2s;
+  -webkit-animation: disappear 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -51,8 +51,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: spin 3s;
-  -webkit-animation: spin 3s;
+  animation: spin 2s;
+  -webkit-animation: spin 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -154,6 +154,8 @@ main {
 .image-principale img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .nouveau {
@@ -181,7 +183,7 @@ main {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 400px;
 }
 
 .bloc-titre-principal {
@@ -416,24 +418,24 @@ main {
   text-decoration: none;
   border: 1px solid #dcdcdc;
   margin-top: 20px;
-  transform: scale(1);
-  transition: transform 400ms;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.2);
+  transition: all 1s;
 }
 .bouton-explorer:hover {
-  transform: scale(1.15);
+  background: linear-gradient(rgba(255, 121, 218, 0.6), rgba(147, 86, 220, 0.6));
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
 }
 
 .numero-etape {
   display: flex;
-  border: solid 1px black;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   background-color: #9356DC;
   color: white;
   height: 30px;
-  width: 30px;
-  margin-top: 30px;
+  width: 35px;
+  margin-top: 20px;
   margin-right: -15px;
   z-index: 1;
 }
@@ -441,20 +443,19 @@ main {
 .bouton-etape {
   border-radius: 20px;
   color: black;
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 14px;
+  line-height: 30px;
   background: #ffffff;
   text-decoration: none;
   border: 1px solid #dcdcdc;
   padding: 20px;
   background-color: #F2F4F4;
   width: 100%;
-  transform: scale(1);
-  transition-property: transform;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.2);
 }
 .bouton-etape:hover {
-  transform: scale(1.15);
   background-color: #f2eafb;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
 }
 .bouton-etape:hover .fa-solid {
   color: #AB4FC4;
@@ -535,7 +536,6 @@ main {
   height: 300px;
   text-decoration: none;
   color: black;
-  border-radius: 20px;
   background-color: #ffffff;
 }
 .card-restaurant img {
@@ -543,7 +543,7 @@ main {
      object-fit: cover;
   height: 70%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .texte-restaurant {
@@ -588,7 +588,7 @@ main {
 
 .footer {
   height: 200px;
-  background-color: dimgray;
+  background-color: rgb(61, 60, 60);
   display: flex;
   flex-direction: column;
   color: #ffffff;
