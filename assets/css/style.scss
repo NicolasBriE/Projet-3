@@ -173,7 +173,7 @@ main {
 
 .titre-principal {
     font-family: 'Shrikhand', sans-serif;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 .image-principale {
@@ -220,8 +220,8 @@ main {
         position: absolute;
         font-size: x-large;
         transition: all 500ms;
-        right: 30px;
-        top: 25px;
+        right: 10px;
+        top: 20px;
 
         &.fas {
 
@@ -899,5 +899,15 @@ main {
 
     .titre-option-menu {
         font-size: 12px;
+    }
+
+    .titre-principal {
+        font-size: 1.2em;
+    }
+
+    .bloc-titre-principal {
+        i {
+            top: 15px;
+        }
     }
 }
