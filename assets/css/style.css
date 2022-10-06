@@ -1,12 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: Roboto;
-  src: url(..font/Roboto/Roboto-Regular);
-}
-@font-face {
-  font-family: Shrikhand;
-  src: url(..font/Shrikhand/Shrikhand-Regular);
-}
 body {
   box-sizing: content-box;
   margin: auto;
@@ -100,6 +92,7 @@ main {
   text-align: center;
   margin-top: 10px;
   font-family: "Shrikhand", sans-serif;
+  margin: auto;
 }
 .logo img {
   width: 40%;
@@ -225,7 +218,6 @@ main {
 .titre-menu::after {
   border-top: solid 3px #99E2D0;
   width: 30px;
-  height: 40px;
   content: "";
   display: -webkit-box;
 }
@@ -307,18 +299,21 @@ main {
   position: relative;
 }
 .option-menu-rapide:hover .prix {
-  transform: translateX(-100px);
+  transform: translateX(-60px);
 }
 .option-menu-rapide:hover .nom-plat {
   width: 60%;
 }
+.option-menu-rapide:hover .titre-option-menu {
+  width: 80%;
+}
 .option-menu-rapide:hover .bouton-valider {
   transform: translateX(-60px);
 }
-.option-menu-rapide:hover .fa-check {
+.option-menu-rapide:hover .fa-circle-check {
   transform: rotate(720deg);
 }
-.option-menu-rapide:hover .fa-check:hover {
+.option-menu-rapide:hover .fa-circle-check:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -337,18 +332,21 @@ main {
   position: relative;
 }
 .option-menu-moyen:hover .prix {
-  transform: translateX(-100px);
+  transform: translateX(-60px);
 }
 .option-menu-moyen:hover .nom-plat {
   width: 60%;
 }
-.option-menu-moyen:hover .bouton-valider {
-  transform: translateX(-56px);
+.option-menu-moyen:hover .titre-option-menu {
+  width: 80%;
 }
-.option-menu-moyen:hover .fa-check {
+.option-menu-moyen:hover .bouton-valider {
+  transform: translateX(-60px);
+}
+.option-menu-moyen:hover .fa-circle-check {
   transform: rotate(720deg);
 }
-.option-menu-moyen:hover .fa-check:hover {
+.option-menu-moyen:hover .fa-circle-check:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -367,30 +365,31 @@ main {
   position: relative;
 }
 .option-menu-lent:hover .prix {
-  transform: translateX(-100px);
+  transform: translateX(-60px);
 }
 .option-menu-lent:hover .nom-plat {
   width: 60%;
 }
-.option-menu-lent:hover .bouton-valider {
-  transform: translateX(-56px);
+.option-menu-lent:hover .titre-option-menu {
+  width: 80%;
 }
-.option-menu-lent:hover .fa-check {
+.option-menu-lent:hover .bouton-valider {
+  transform: translateX(-60px);
+}
+.option-menu-lent:hover .fa-circle-check {
   transform: rotate(720deg);
 }
-.option-menu-lent:hover .fa-check:hover {
+.option-menu-lent:hover .fa-circle-check:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-.fa-check {
-  border: solid 1px;
-  border-radius: 50% 50% 50% 50%;
-  margin: 20px;
+.fa-circle-check {
   transform: rotate(0deg);
   transition: transform 2s;
   color: #99E2D0;
   background-color: white;
+  border-radius: 50%;
 }
 
 .bouton-valider {
@@ -401,8 +400,10 @@ main {
   border-radius: 0% 20% 20% 0%;
   transform: translateX(0px);
   transition: transform 1s;
-  position: relative;
-  left: 60px;
+  position: absolute;
+  left: 100%;
+  width: 60px;
+  height: 100%;
 }
 .bouton-valider:hover {
   cursor: -webkit-grab;
@@ -498,6 +499,7 @@ main {
 .texte-option-menu {
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
 }
 
 .nom-plat {
@@ -507,15 +509,24 @@ main {
   white-space: nowrap;
   height: 16px;
   width: 100%;
-  transition: width 2s;
+  transition: width 1s;
+}
+
+.titre-option-menu {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  transition: width 1s;
 }
 
 .prix {
   display: flex;
-  transition: transform 2s;
+  transition: transform 1s;
   transform: translateX(0);
   position: absolute;
-  left: 90%;
+  left: 85%;
+  width: 100%;
 }
 
 .restaurants {
@@ -607,9 +618,6 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .logo {
-    margin: auto;
-  }
   .card-restaurant {
     width: 45%;
   }
@@ -636,11 +644,20 @@ main {
   .option-menu-rapide {
     width: 60%;
   }
+  .option-menu-rapide:hover .nom-plat {
+    width: 80%;
+  }
   .option-menu-moyen {
     width: 60%;
   }
+  .option-menu-moyen:hover .nom-plat {
+    width: 80%;
+  }
   .option-menu-lent {
     width: 60%;
+  }
+  .option-menu-lent:hover .nom-plat {
+    width: 80%;
   }
   .bouton-commander {
     margin-top: 60px;
@@ -711,6 +728,13 @@ main {
   }
   .logo {
     width: 50%;
-    margin: auto;
+  }
+}
+@media screen and (max-width: 300px) {
+  .texte-option-menu {
+    font-size: 10px;
+  }
+  .titre-option-menu {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
