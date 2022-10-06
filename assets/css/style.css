@@ -214,6 +214,7 @@ main {
 
 .titre-menu {
   font-size: larger;
+  margin-left: 10px;
 }
 .titre-menu::after {
   border-top: solid 3px #99E2D0;
@@ -224,6 +225,7 @@ main {
 
 .titre-accueil {
   font-size: larger;
+  margin-left: 10px;
 }
 
 .etapes {
@@ -413,7 +415,7 @@ main {
 .bouton-explorer {
   border-radius: 20px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
@@ -475,7 +477,7 @@ main {
 .bouton-commander {
   border-radius: 20px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
@@ -595,6 +597,7 @@ main {
 
 .titre-restaurant {
   flex-direction: column;
+  font-size: 13px;
 }
 
 .footer {
@@ -694,6 +697,9 @@ main {
   }
   .texte-restaurant {
     height: 40%;
+  }
+  .texte-restaurant i {
+    top: 12%;
   }
   .footer {
     justify-content: center;

@@ -21,6 +21,7 @@ $color-fifth: #ffffff;
 
 @mixin titre {
     font-size: larger;
+    margin-left: 10px;
 }
 
 @mixin titre-media {
@@ -500,7 +501,7 @@ main {
 
     border-radius: 20px;
     color: $color-fifth;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 50px;
     background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
@@ -567,7 +568,7 @@ main {
 .bouton-commander {
     border-radius: 20px;
     color: $color-fifth;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 50px;
     background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
@@ -701,6 +702,7 @@ main {
 
 .titre-restaurant {
     flex-direction: column;
+    font-size: 13px;
 }
 
 
@@ -843,6 +845,10 @@ main {
 
     .texte-restaurant {
         height: 40%;
+
+        i {
+            top: 12%;
+        }
     }
 
     .footer {
