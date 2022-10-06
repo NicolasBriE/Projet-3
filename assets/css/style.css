@@ -83,6 +83,7 @@ main {
 }
 .header {
   margin-bottom: -20px;
+  padding-top: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -104,7 +105,7 @@ main {
 }
 
 .arrow-icon {
-  margin: 10px;
+  margin-left: 10px;
   font-size: large;
 }
 
@@ -114,13 +115,13 @@ main {
   text-align: center;
   align-items: center;
   margin-bottom: 40px;
-  background-color: #F2F4F4;
+  background-color: #f6f6f6;
   padding-bottom: 40px;
   margin-top: 20px;
 }
 
 .menu {
-  background-color: #F2F4F4;
+  background-color: #f6f6f6;
   padding: 20px;
   padding-top: 50px;
   border-radius: 30px;
@@ -128,11 +129,12 @@ main {
 
 .lieu {
   display: flex;
-  background-color: #cfd2d2;
+  background-color: #eaeaea;
   width: 100%;
   height: 50px;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px -2px 5px 0px grey;
 }
 
 .titre-principal {
@@ -453,7 +455,7 @@ main {
   text-decoration: none;
   border: 1px solid #dcdcdc;
   padding: 20px;
-  background-color: #F2F4F4;
+  background-color: #f6f6f6;
   width: 100%;
   box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.2);
 }
@@ -462,7 +464,7 @@ main {
   box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
 }
 .bouton-etape:hover .fa-solid {
-  color: #AB4FC4;
+  color: #9356DC;
 }
 
 .bouton-option-menu {
@@ -471,7 +473,7 @@ main {
   color: black;
   font-size: 14px;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   width: 90%;
 }
 
@@ -533,7 +535,7 @@ main {
 }
 
 .restaurants {
-  background-color: #F2F4F4;
+  background-color: #f6f6f6;
   padding-bottom: 40px;
   padding-top: 40px;
 }
@@ -551,6 +553,7 @@ main {
   text-decoration: none;
   color: black;
   background-color: #ffffff;
+  border-radius: 20px 20px 0px 0px;
 }
 .card-restaurant img {
   -o-object-fit: cover;
@@ -603,7 +606,7 @@ main {
 
 .footer {
   height: 200px;
-  background-color: rgb(61, 60, 60);
+  background-color: #353535;
   display: flex;
   flex-direction: column;
   color: #ffffff;
