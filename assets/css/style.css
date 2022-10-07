@@ -494,7 +494,7 @@ main {
   margin-bottom: 60px;
 }
 .bouton-commander:hover {
-  background: #af6eeb;
+  background: linear-gradient(rgba(255, 121, 218, 0.6), rgba(147, 86, 220, 0.6));
 }
 
 .bouton-option-menu-titre {

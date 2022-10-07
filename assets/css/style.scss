@@ -585,7 +585,7 @@ main {
     margin-bottom: 60px;
 
     &:hover {
-        background: lighten($color: blueviolet, $amount: 15%);
+        background: linear-gradient(rgba($color-secondary, 0.6), rgba($color-primary, 0.6));
     }
 }
 
