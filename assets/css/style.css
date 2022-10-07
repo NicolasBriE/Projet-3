@@ -739,6 +739,9 @@ main {
   .logo {
     width: 50%;
   }
+  .arrow-icon {
+    font-size: xx-large;
+  }
 }
 @media screen and (max-width: 300px) {
   .texte-option-menu {
@@ -752,5 +755,18 @@ main {
   }
   .bloc-titre-principal i {
     top: 15px;
+  }
+  .form {
+    font-size: 12px;
+  }
+  .bouton-explorer {
+    font-size: 12px;
+  }
+  .etape {
+    width: 90%;
+  }
+  .bouton-commander {
+    width: 60%;
+    margin-left: 20%;
   }
 }/*# sourceMappingURL=style.css.map */
