@@ -288,7 +288,7 @@ main {
     text-align: center;
 }
 
-.entrées {
+.entrees {
     @include options;
 }
 
@@ -342,8 +342,8 @@ main {
 }
 
 .option-menu-rapide {
-    animation: display 0.5s;
-    -webkit-animation: display 0.5s;
+    animation: display 1s;
+    -webkit-animation: display 1s;
     display: flex;
     text-decoration: none;
     animation-fill-mode: forwards;

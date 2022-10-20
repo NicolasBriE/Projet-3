@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   box-sizing: content-box;
   margin: auto;
@@ -244,7 +243,7 @@ main {
   text-align: center;
 }
 
-.entrées {
+.entrees {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -291,8 +290,8 @@ main {
 }
 
 .option-menu-rapide {
-  animation: display 0.5s;
-  -webkit-animation: display 0.5s;
+  animation: display 1s;
+  -webkit-animation: display 1s;
   display: flex;
   text-decoration: none;
   -webkit-animation-fill-mode: forwards;
