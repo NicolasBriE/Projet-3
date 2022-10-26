@@ -1,0 +1,20 @@
+.logo {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Shrikhand", sans-serif;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.logo img {
+  width: 40%;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  font-size: large;
+}/*# sourceMappingURL=components.css.map */

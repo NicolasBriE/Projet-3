@@ -1,0 +1,135 @@
+main {
+    border-radius: 20px;
+    @include column;
+}
+
+.header {
+    margin-bottom: -20px;
+    padding-top: 10px;
+    text-align: center;
+    @include column;
+}
+
+.menu {
+
+    background-color: $color-fourth;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 30px;
+}
+
+.bloc-titre-principal {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    i {
+        position: absolute;
+        font-size: x-large;
+        transition: all 500ms;
+        right: 10px;
+        top: 20px;
+
+        &.fas {
+
+            font-size: x-large;
+            opacity: 0;
+
+
+            &:hover {
+
+                opacity: 1;
+                cursor: pointer;
+                font-weight: bold;
+                color: transparent;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+
+
+            }
+        }
+
+        &.far {
+            font-size: x-large;
+            opacity: 1;
+
+            &.hover {
+                opacity: 0;
+            }
+        }
+
+
+    }
+
+}
+
+.entrees {
+    @include options;
+}
+
+@keyframes display {
+
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes display {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@keyframes translate {
+    0% {}
+
+    100% {}
+}
+
+@-webkit-keyframes translate {
+    0% {}
+
+    100% {}
+}
+
+.plats {
+    @include options;
+}
+
+.desserts {
+    @include options;
+}
+
+.options {
+    @include options;
+}
+
+.footer {
+    height: 200px;
+    background-color: #353535;
+    @include column;
+    color: $color-fifth;
+    justify-content: space-around;
+    padding-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: $color-fifth;
+
+    }
+
+
+}

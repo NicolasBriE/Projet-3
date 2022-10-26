@@ -1,0 +1,23 @@
+@mixin border {
+    border: 1px solid #dcdcdc;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@mixin titre {
+    font-size: larger;
+    margin-left: 10px;
+}
+
+@mixin titre-media {
+    font-size: x-large;
+}
